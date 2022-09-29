@@ -88,13 +88,6 @@ stages:
                 inputs:
                   command: 'apply'
                   workingDirectory: '$(Pipeline.Workspace)/terraform-manifests-out'
-                  environmentServiceName: 'Free Trial(1)(670a49a3-bea5-4729-aea5-8121cd918ca4)'
-                  commandOptions: '$(Pipeline.Workspace)/terraform-manifests-out/$(DEV_ENVIRONMENT)-$(Build.BuildId).out'
-              - task: TerraformCLI@0
-                inputs:
-                  command: 'apply'
-                  workingDirectory: '$(Pipeline.Workspace)/terraform-manifests-out'
-                  environmentServiceName: 'Free Trial(2)(670a49a3-bea5-4729-aea5-8121cd918ca4)'
+                  environmentServiceName: 'azure-to-terraform-aks-connnect'
                   commandOptions: '$(Pipeline.Workspace)/terraform-manifests-out/$(DEV_ENVIRONMENT)-$(Build.BuildId).out'
                   allowTelemetryCollection: false
-                 
