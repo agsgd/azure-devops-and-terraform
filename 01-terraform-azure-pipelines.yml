@@ -76,12 +76,6 @@ stages:
                   backendAzureRmKey: 'aks-$(DEV_ENVIRONMENT).tfstate'
                   allowTelemetryCollection: false
               - task: TerraformCLI@0
-                inputs:
-                  command: 'plan'
-                  workingDirectory: '$(Pipeline.Workspace)/terraform-manifests-out'
-                  environmentServiceName: 'Free Trial(1)(670a49a3-bea5-4729-aea5-8121cd918ca4)'
-                  allowTelemetryCollection: false
-              - task: TerraformCLI@0
                 displayName: Terraform plan
                 inputs:
                   command: 'plan'
